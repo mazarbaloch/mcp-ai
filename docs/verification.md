@@ -45,7 +45,7 @@ The live scenario reached these observed pages through model-selected MCP calls:
 Earlier verification runs used `MAX_TOOL_STEPS=12`: one completed with an answer reporting
 the observed duration (`3 years 6 months`), credits (`210 ECTS credits`), and the explicit
 Study Plan link, while another reached the curriculum system and stopped at the configured
-limit while requesting another action. The default is now `MAX_TOOL_STEPS=20` so the live
+limit while requesting another action. The default is now `MAX_TOOL_STEPS=50` so the live
 lecture task has more room to finish. Bounded-agent behavior remains visible in the UI.
 
 The runtime contains no HAMK facts or HAMK route helpers. The smoke script checks that
