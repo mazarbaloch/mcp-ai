@@ -51,7 +51,7 @@ class Settings(BaseModel):
     ollama_num_ctx: int = Field(default=32768, ge=8192, le=131072)
     playwright_mcp_package: str = "@playwright/mcp@0.0.83"
     playwright_headless: bool = False
-    max_tool_steps: int = Field(default=12, ge=1, le=30)
+    max_tool_steps: int = Field(default=20, ge=1, le=20)
     model_timeout: float = Field(default=300, ge=1, le=1800)
     tool_timeout: float = Field(default=90, ge=1, le=300)
     result_max_chars: int = Field(default=14000, ge=1000, le=30000)

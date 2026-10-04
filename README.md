@@ -200,7 +200,7 @@ Read `app/agent.py` alongside the tool activity panel:
 7. Give the observations to the model for its next decision.
 
 Calls in a batch execute sequentially because browser actions change page state. Every
-requested call, including a rejected one, consumes the **12-call default budget**. A final model
+requested call, including a rejected one, consumes the **20-call default budget**. A final model
 answer is still permitted after the last call, but further browser work is stopped. A connection
 failure stops the run; a normal MCP tool error is returned to the model so it can correct it.
 There are separate timeouts for Ollama and MCP. Cancellation exits the owned contexts.
@@ -239,7 +239,7 @@ Environment variables are optional; change them in the terminal before launching
 | `OLLAMA_NUM_CTX` | `32768` | Context tokens (8,192–131,072) |
 | `PLAYWRIGHT_MCP_PACKAGE` | `@playwright/mcp@0.0.83` | Pinned official package |
 | `PLAYWRIGHT_HEADLESS` | `false` | Keep false for a visible lecture browser |
-| `MAX_TOOL_STEPS` | `12` | Maximum individual tool calls (1–30) |
+| `MAX_TOOL_STEPS` | `20` | Maximum individual tool calls (1–20) |
 | `MODEL_TIMEOUT` | `300` | Seconds per local model response |
 | `TOOL_TIMEOUT` | `90` | MCP request timeout in seconds |
 | `RESULT_MAX_CHARS` | `14000` | Maximum retained characters per observation |

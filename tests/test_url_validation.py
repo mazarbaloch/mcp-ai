@@ -50,6 +50,7 @@ def test_rejected_urls(url):
 
 def test_settings_environment_and_headed_default(monkeypatch):
     assert Settings().playwright_headless is False
+    assert Settings().max_tool_steps == 20
     monkeypatch.setenv("PLAYWRIGHT_HEADLESS", "true")
     monkeypatch.setenv("MAX_TOOL_STEPS", "7")
     assert Settings.from_env().playwright_headless is True

@@ -42,11 +42,11 @@ The live scenario reached these observed pages through model-selected MCP calls:
 - `https://hamk.opinto-opas.fi/home?lang=en`
 - `https://hamk.opinto-opas.fi/curricula`
 
-With the default `MAX_TOOL_STEPS=12`, one run completed with an answer reporting the
-observed duration (`3 years 6 months`), credits (`210 ECTS credits`), and the explicit
-Study Plan link. Another run reached the curriculum system and then stopped at the
-configured step limit while requesting another action. That is expected bounded-agent
-behavior and is shown in the UI rather than hidden.
+Earlier verification runs used `MAX_TOOL_STEPS=12`: one completed with an answer reporting
+the observed duration (`3 years 6 months`), credits (`210 ECTS credits`), and the explicit
+Study Plan link, while another reached the curriculum system and stopped at the configured
+limit while requesting another action. The default is now `MAX_TOOL_STEPS=20` so the live
+lecture task has more room to finish. Bounded-agent behavior remains visible in the UI.
 
 The runtime contains no HAMK facts or HAMK route helpers. The smoke script checks that
 the workflow reaches a relevant live page and produces observations; it does not assert
